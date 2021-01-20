@@ -5,6 +5,8 @@ import './App.css';
  import NavBar from './components/NavBar';
 import ItemListConteiner from './components/ItemListConteiner'; 
 import CountContainer from "./components/CountContainer";
+
+ 
 //componentes
 
 function App() {
@@ -15,10 +17,11 @@ function App() {
      
      <NavBar/>
     
-     <ItemListConteiner greeting={"Hola Biemvenido"}/>
-
+      <h1>Hola Biemvenido</h1> 
+     <ItemListConteiner greeting={" "}/>
      
-     <CountContainer initial={1} stock={5} />
+     <CountContainer initial={1} stock={5} / >
+     
      
     </div>
   );

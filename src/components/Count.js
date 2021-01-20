@@ -1,5 +1,7 @@
 import React from "react";
 import CartWidget from './CartWidget';
+ 
+
 const Count = ({ min, max, onAdd, count }) => {
   return (
     <React.Fragment>
@@ -9,9 +11,9 @@ const Count = ({ min, max, onAdd, count }) => {
         <button onClick={max}> + </button>
              
       <button disabled={count === 0} onClick={onAdd}>
-        {" "}Agregar al carrito <CartWidget/>{" "}
+        {" "}Agregar al carrito <CartWidget/> {" "} 
       </button>
-       
+      
       </div>
 
     </React.Fragment>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Count from "../components/Count";
+ 
 
 const CountCountainer = ({ initial, stock }) => {
   const [count, setCount] = useState(initial);
@@ -19,11 +20,15 @@ const CountCountainer = ({ initial, stock }) => {
 
   const onAdd = () => {
     alert(`Agregaste ${count} al carrito`);
+    
   };
+   
+ 
 
   return (
     <>
-      <Count min={sub} max={add} onAdd={onAdd} count={count} />
+      <Count min={sub} max={add} onAdd={onAdd } count={count} />
+     
     </>
   );
 };
