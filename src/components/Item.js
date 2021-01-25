@@ -1,10 +1,23 @@
 import React from 'react';
+import CountCountainer from './CountContainer';
+import {Link} from 'react-router-dom';
 
-export const Item = ({item}) => {
+const Item = ({item}) => {
 
     return(
-        <React.Fragment>
-            <div>{item.title} {item.description}</div>
-        </React.Fragment>
+       <React.Fragment> 
+            <div>
+              <Link to={'/item/${item.id}'}>
+              <p>{item.titulo}</p> 
+              
+              </Link>  
+              {item.description}
+              {item.precio}
+       
+              
+            </div>
+            
+            </React.Fragment>
     )
 }
+export  default Item;
