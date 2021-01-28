@@ -5,7 +5,7 @@ import NavBar from './components/NavBar';
 import ItemListConteiner from './components/ItemListConteiner'; 
 import {ItemDetailContainer} from './components/ItemDetailContainer';
 //import CountContainer from "./components/CountContainer";
-import {BrowserRouter, Switch, Router} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 //import {ItemDetailContainer } from "./components/ItemDetailContainer";
 
 
@@ -14,22 +14,22 @@ import {BrowserRouter, Switch, Router} from 'react-router-dom';
 function App() {
 
   return (
-<BrowserRouter>
+    <BrowserRouter>
 
 <div className="App">
 <NavBar/>
 <Switch>
-  <Router path='/item/:id'>
+  <Route path='/item/:id'>
   <ItemListConteiner/>
-  </Router>
-  <Router path='/'>
+  </Route>
+  <Route path='/'>
   <ItemListConteiner greeting={" "}/>
-  </Router>
+  </Route>
 </Switch>
 </div>
-</BrowserRouter>
-
  
+
+</BrowserRouter>
    
   );
 

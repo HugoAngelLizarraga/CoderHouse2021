@@ -29,7 +29,7 @@ const itemList =[
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState([])
-     const {id}= useParams();
+     const {id=1}= useParams();
  
 
     useEffect(() => {
@@ -40,7 +40,7 @@ const ItemDetailContainer = () => {
         })
         call.then((response) => {
             console.log(response)
-            setItem(id-1)
+            setItem(id)
             
         })
     }, [])
