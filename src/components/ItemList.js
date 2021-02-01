@@ -1,12 +1,14 @@
 import React from 'react';
-import Item from  './Item';
+import Item from'./Item.js' ;
+import {Link} from 'react-router-dom';
 
-export const ItemList = ({items}) => {
+ const ItemList = ({items}) => {
 
 
     return(
-        <React.Fragment>
+        <Link>
             {items && items.map(e => < Item key={e.id} item={e}/>)}
-        </React.Fragment>
-    )
-}
+        </Link>
+    )}
+
+export default ItemList;

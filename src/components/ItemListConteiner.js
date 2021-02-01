@@ -1,52 +1,49 @@
 import { React, useState, useEffect } from 'react';
-import { ItemList } from './ItemList';
+import ItemList from'./ItemList' ;
 
 
-const items = [
+const products = [
     {
-        id: 123456,
+        id: 1,
         title: "medias",
-        description: "Medias Largas desportivas",
+        description: "baja",
         preci: "42",
-        pictureUrl: "http://www.google.com/logo.png"
+        pictureUrl: "https://images-na.ssl-images-amazon.com/images/G/01/amazonglobal/images/email/asins/DURM-230DD6D6594D9C14._V535729156_.jpg"
     },
     {
-        id: 12342323,
+        id: 2,
         title: "Zapatos",
-        description: "Cuero y cocedura artesenal",
+        description: "media",
         preci: "22",
-        pictureUrl: "http://www.google.com/logo.png"
+        pictureUrl: "https://images-na.ssl-images-amazon.com/images/G/01/amazonglobal/images/email/asins/DURM-230DD6D6594D9C14._V535729156_.jpg"
     },
     {
-        id: 122312,
+        id: 3,
         title: "pantalón",
-        description: "Color rojo rasgado ",
+        description: "alta ",
         preci: "62",
-        pictureUrl: "http://www.google.com/logo.png"
+        pictureUrl: "https://images-na.ssl-images-amazon.com/images/G/01/amazonglobal/images/email/asins/DURM-230DD6D6594D9C14._V535729156_.jpg"
     }
 ]
-const ItemListConteiner = ({ greeting }) => {
-    const [products, setProducts] = useState([]);
+const ItemListConteiner = () => {
+    const [items, setItems] = useState([]);
     
     useEffect(() => {
 
         const call = new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(items)
+                resolve(products)
             }, 2000)
         })
         call.then((response) => {
             console.log(response)
-            setProducts(response)
+            setItems(response)
         })
     }, [])
-    useEffect(() => {
-        console.log(products)
-
-    }, [products])
+    
     return (
         <>
-            <ItemList items={products} />
+            <ItemList items={items} />
         </>
     );
 };

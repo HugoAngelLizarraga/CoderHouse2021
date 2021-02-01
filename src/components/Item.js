@@ -1,23 +1,29 @@
 import React from 'react';
-import CountCountainer from './CountContainer';
+ 
 import {Link} from 'react-router-dom';
 
 const Item = ({item}) => {
 
     return(
        <React.Fragment> 
-            <div>
-              <Link to={'/item/${item.id}'}>
-              <p>{item.titulo}</p> 
+            <div   >
               
+            <img style={{width:200, height:300}} src={item.pictureUrl} alt={item.titulo}/>
+              <Link to={'/item/${item.id}'}>
+              <p>{item.id}</p>
+     
               </Link>  
-              {item.description}
-              {item.precio}
-       
+              
+              <p>{item.titulo}</p> 
+              <p>{item.description}</p>
+              <p> {item.preci}</p>
+               
               
             </div>
             
-            </React.Fragment>
+        </React.Fragment>
     )
 }
 export  default Item;
+
+

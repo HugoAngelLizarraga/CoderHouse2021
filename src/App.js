@@ -1,40 +1,48 @@
 
 import React from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
-import ItemListConteiner from './components/ItemListConteiner'; 
-import {ItemDetailContainer} from './components/ItemDetailContainer';
-//import CountContainer from "./components/CountContainer";
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
-//import {ItemDetailContainer } from "./components/ItemDetailContainer";
 
+import ItemListConteiner from './components/ItemListConteiner';
 
-//componentes
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import NavBa from './components/NavBarr'
+import ItemDetailConteiner from './components/ItemDetailContainer'
+
+import Login from './components/Login'
+import Footer from './components/Footer'
+//componentes   
 
 function App() {
 
   return (
     <BrowserRouter>
 
-<div className="App">
-<NavBar/>
-<Switch>
-  <Route path='/item/:id'>
-  <ItemListConteiner/>
-  </Route>
-  <Route path='/'>
-  <ItemListConteiner greeting={" "}/>
-  </Route>
-</Switch>
-</div>
- 
+      <div className="App">
+        <Route path="">
+          <NavBa />
+          
+        </Route>
 
-</BrowserRouter>
-   
+        <Switch>
+        <Route path="/login" component={Login}>
+          <Login/>
+          </Route>
+          <Route path='/item/:id'>
+            <ItemDetailConteiner />
+          </Route>
+          <Route path='/' >
+            <ItemListConteiner />
+            
+            <Footer />
+          </Route>
+
+         
+        
+
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
-
-
-  
 }
 
 export default App;
