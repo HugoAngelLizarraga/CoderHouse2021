@@ -15,9 +15,10 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <BrowserRouter>
+    
 
       <div className="App">
+        <BrowserRouter>
         <Route path="">
           <NavBa />
           
@@ -40,8 +41,9 @@ function App() {
         
 
         </Switch>
+        </BrowserRouter>
       </div>
-    </BrowserRouter>
+     
   );
 }
 
