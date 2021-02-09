@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 
     return(
         <Link>
+        
             {items && items.map(e => < Item key={e.id} item={e}/>)}
         </Link>
     )}

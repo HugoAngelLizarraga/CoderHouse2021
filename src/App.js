@@ -11,7 +11,7 @@ import ItemDetailConteiner from './components/ItemDetailContainer'
 import Login from './components/Login'
 import Footer from './components/Footer'
 //componentes   
-
+import CartContext from './components/CartContext';
 function App() {
 
   return (
@@ -28,7 +28,7 @@ function App() {
         <Route path="/login" component={Login}>
           <Login/>
           </Route>
-          <Route path='/item/:id'>
+          <Route path='/item/:itemId'>
             <ItemDetailConteiner />
           </Route>
           <Route path='/' >
@@ -36,9 +36,6 @@ function App() {
             
             <Footer />
           </Route>
-
-         
-        
 
         </Switch>
         </BrowserRouter>

@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 const Item = ({item}) => {
 
     return(
-       <React.Fragment> 
+       <> 
             <div   >
               
             <img style={{width:200, height:300}} src={item.pictureUrl} alt={item.titulo}/>
@@ -21,7 +21,7 @@ const Item = ({item}) => {
               
             </div>
             
-        </React.Fragment>
+        </>
     )
 }
 export  default Item;
